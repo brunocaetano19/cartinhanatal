@@ -50,6 +50,17 @@ ul{
     margin: 0; /* Remove a margem para alinhar corretamente com o texto */
 }
 
+.main1 {
+    display: flex; /* Usa flexbox para alinhar os elementos horizontalmente */
+    align-items: center; /* Centraliza os elementos verticalmente */
+    text-align: left; /* Alinha o texto à esquerda dentro da div */
+}
+
+.foto1{
+    width: 50%; /* Define a largura da imagem para metade da div */
+    margin: 0; /* Remove a margem para alinhar corretamente com o texto */ 
+}
+
 @media only screen and (max-width: 600px) {
     .main {
         flex-direction: column; /* Empilha os elementos verticalmente em telas pequenas */
@@ -65,4 +76,18 @@ p{
     color: #ffffff;
     font-size: 25px;
     text-align: center;
+    
+}
+
+a{
+    color: #ffffff;
+    text-decoration: none;
+}
+h1,h2,h3,ul,li{
+    color: #ffffff;
+}
+
+.titulo{
+    text-align: center;
+    margin-top: 0;
 }
