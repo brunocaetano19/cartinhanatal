@@ -8,31 +8,18 @@ body {
 }
 
 header {
+    display: flex; /* Usa flexbox para alinhar os elementos do cabeçalho */
+    justify-content: space-between; /* Espaça os elementos uniformemente */
+    align-items: center; /* Centraliza os elementos verticalmente */
     height: 100px;
     color: #ffffff;
-    margin: 15px;
-    
+    margin: 0 ;
+    padding: 0 15px; /* Adiciona um pouco de espaço nas laterais */
+    background-color: #0c81f7c4;
 }
 
-h1 {
-    font-size: 30px;
-    margin-left: 50px;
-}
-
-main {
-    width: 100%;
-    height: 100%;
-    margin: 0 auto;
-}
-
-a {
-    color: #000000;
-    text-decoration: none;
-}
-
-nav{
-    display: inline;
-    margin-left: 350px;
+nav {
+    display: flex; /* Muda de inline para flex para melhor controle dos itens da lista */
 }
 
 ul{
@@ -41,21 +28,41 @@ ul{
     font-size: 25px;
 }
 
+
 .crea {
-    position: relative; /* Requerido para o z-index funcionar */
-    z-index: 100; /* Garante que o logotipo esteja posicionado acima dos outros elementos */
-    margin: 0 auto; /* Centraliza o logotipo horizontalmente */
+    margin: 0; /* Remove a margem para alinhar com o topo */
 }
 
 .creaft {
-    width: 250px;
+    width: 200px; /* Ajusta o tamanho conforme necessário */
+    
 }
 
-.foto{
-    width: 650px;
+.main {
+    display: flex; /* Usa flexbox para alinhar os elementos horizontalmente */
+    justify-content: center; /* Centraliza os elementos horizontalmente */
+    align-items: center; /* Centraliza os elementos verticalmente */
+    text-align: left; /* Alinha o texto à esquerda dentro da div */
 }
 
-.titulo{
-    display: inline-block;
-    margin-right:  0px;
+.foto {
+    width: 50%; /* Define a largura da imagem para metade da div */
+    margin: 0; /* Remove a margem para alinhar corretamente com o texto */
+}
+
+@media only screen and (max-width: 600px) {
+    .main {
+        flex-direction: column; /* Empilha os elementos verticalmente em telas pequenas */
+    }
+    .foto {
+        width: 80%; /* Ajusta a largura da imagem para telas pequenas */
+        margin: 0 auto; /* Centraliza a imagem */
+    }
+}
+
+
+p{
+    color: #ffffff;
+    font-size: 25px;
+    text-align: center;
 }
