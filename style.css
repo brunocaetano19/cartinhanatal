@@ -2,17 +2,12 @@ body {
     font-family: sans-serif;
     font-size: 16px;
     color: rgb(0, 0, 0);
-<<<<<<< HEAD
     background-color: #0c81f7c4;
-=======
-    background-color: 	#0c81f7c4;
->>>>>>> 07623273dec8711383241e6975d4e1002af7e212
     margin: 0;
     padding: 0;
 }
 
 header {
-<<<<<<< HEAD
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -74,29 +69,11 @@ nav {
 }
 
 ul {
-=======
-    display: flex; /* Usa flexbox para alinhar os elementos do cabeçalho */
-    justify-content: space-between; /* Espaça os elementos uniformemente */
-    align-items: center; /* Centraliza os elementos verticalmente */
-    height: 100px;
-    color: #ffffff;
-    margin: 0 ;
-    padding: 0 15px; /* Adiciona um pouco de espaço nas laterais */
-    background-color: #0c81f7c4;
-}
-
-nav {
-    display: flex; /* Muda de inline para flex para melhor controle dos itens da lista */
-}
-
-ul{
->>>>>>> 07623273dec8711383241e6975d4e1002af7e212
     display: inline;
     margin-left: 30px;
     font-size: 25px;
 }
 
-<<<<<<< HEAD
 .crea {
     margin: 0;
 }
@@ -167,68 +144,3 @@ h1, h2, h3, ul, li {
     margin-top: 20px;
     display: inline-block;
 }
-=======
-
-.crea {
-    margin: 0; /* Remove a margem para alinhar com o topo */
-}
-
-.creaft {
-    width: 200px; /* Ajusta o tamanho conforme necessário */
-    
-}
-
-.main {
-    display: flex; /* Usa flexbox para alinhar os elementos horizontalmente */
-    justify-content: center; /* Centraliza os elementos horizontalmente */
-    align-items: center; /* Centraliza os elementos verticalmente */
-    text-align: left; /* Alinha o texto à esquerda dentro da div */
-}
-
-.foto {
-    width: 50%; /* Define a largura da imagem para metade da div */
-    margin: 0; /* Remove a margem para alinhar corretamente com o texto */
-}
-
-.main1 {
-    display: flex; /* Usa flexbox para alinhar os elementos horizontalmente */
-    align-items: center; /* Centraliza os elementos verticalmente */
-    text-align: left; /* Alinha o texto à esquerda dentro da div */
-}
-
-.foto1{
-    width: 50%; /* Define a largura da imagem para metade da div */
-    margin: 0; /* Remove a margem para alinhar corretamente com o texto */ 
-}
-
-@media only screen and (max-width: 600px) {
-    .main {
-        flex-direction: column; /* Empilha os elementos verticalmente em telas pequenas */
-    }
-    .foto {
-        width: 80%; /* Ajusta a largura da imagem para telas pequenas */
-        margin: 0 auto; /* Centraliza a imagem */
-    }
-}
-
-
-p{
-    color: #ffffff;
-    font-size: 25px;
-    text-align: center;
-    
-}
-
-a{
-    color: #ffffff;
-    text-decoration: none;
-}
-h1,h2,h3,ul,li{
-    color: #ffffff;
-}
-
-.titulo{
-    text-align: center;
-    margin-top: 0;
-}
->>>>>>> 07623273dec8711383241e6975d4e1002af7e212
