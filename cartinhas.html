@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="./style.css">
+    <script src="./script.js"></script>
+    <title>Crea JR. - Cartinhas de Natal</title>
+</head>
+<body>
+    <header>
+        <h1 class="titulo">Crea JR. - Cartinhas de Natal</h1>
+        <nav>
+            <ul><a href="./index.html">Inicio</a></ul>
+            <ul><a href="./cartinhas.html">Cartinhas</a></ul>
+            <ul><a href="./doacoes.html">Doações</a></ul>
+        </nav>
+        <div class="crea">
+            <img class="creaft" src="./crea.png">
+        </div>
+    </header>
+    
+    <div class="main1">
+        <img class="foto1" src="./Post instagram natal adote uma carta.png"> 
+        <h1>Cartinhas disponíveis:</h1>
+        
+        <div class="cartas-carousel">
+            <img class="cartas" src="./carta.png">
+            <img class="cartas" src="./carta.png">
+            <img class="cartas" src="./carta.png">
+            <img class="cartas" src="./carta.png">
+            <img class="cartas" src="./carta.png">
+            <img class="cartas" src="./carta.png">
+        </div>
+
+        <a class="ver-todas" href="#todasAsCartas">Ver Todas</a>
+    </div>
+    
+    <!-- Seção com Todas as Cartas -->
+    <div id="todasAsCartas">
+        <!-- Coloque aqui o código para exibir todas as cartas -->
+        <p>Carta 1</p>
+        <p>Carta 2</p>
+        <p>Carta 3</p>
+        <!-- Adicione mais cartas conforme necessário -->
+    </div>
+
+    <script>
+        $(document).ready(function(){
+            $('.cartas-carousel').slick({
+                slidesToShow: 3, // Altere para exibir três cartas
+                slidesToScroll: 1,
+                autoplay: true,
+                autoplaySpeed: 2000 // Tempo de exibição de cada carta em milissegundos
+            });
+
+            // Adiciona o comportamento de rolar até a seção de todas as cartas ao clicar em "Ver Todas"
+            $('.ver-todas').click(function(e){
+                e.preventDefault();
+                $('html, body').animate({
+                    scrollTop: $('#todasAsCartas').offset().top
+                }, 1000); // Tempo da animação em milissegundos
+            });
+        });
+    </script>
+</body>
+</html>
