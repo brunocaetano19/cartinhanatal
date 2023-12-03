@@ -2,6 +2,7 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
@@ -23,8 +24,13 @@
         </div>
     </header>
     
+    <div class="adote">
+        <img class="ftpapainoel" src="./papainoelsemfundo.png">
+        <h1 class="blinking adote-text">Adote uma cartinha</h1>
+    </div>
+
     <div class="main1">
-        <img class="foto1" src="./Post instagram natal adote uma carta.png"> 
+        <!-- <img class="foto1" src="./Post instagram natal adote uma carta.png"> -->
         <h1>Cartinhas disponíveis:</h1>
         
         <div class="cartas-carousel">
@@ -40,13 +46,13 @@
     </div>
     
     <!-- Seção com Todas as Cartas -->
-    <div id="todasAsCartas">
-        <!-- Coloque aqui o código para exibir todas as cartas -->
+    <!-- <div id="todasAsCartas">
+        Coloque aqui o código para exibir todas as cartas 
         <p>Carta 1</p>
         <p>Carta 2</p>
         <p>Carta 3</p>
-        <!-- Adicione mais cartas conforme necessário -->
-    </div>
+        Adicione mais cartas conforme necessário 
+    </div>-->
 
     <script>
         $(document).ready(function(){
@@ -65,6 +71,29 @@
                 }, 1000); // Tempo da animação em milissegundos
             });
         });
+
+        $(document).ready(function(){
+        $('.cartas-carousel').slick({
+            slidesToShow: 3,
+            slidesToScroll: 1,
+            autoplay: true,
+            autoplaySpeed: 2000
+        });
+
+        $('.adote-text').on('animationiteration', function() {
+            setTimeout(() => {
+                // Remova a classe 'blinking' para interromper a animação de piscar
+                $(this).removeClass('blinking');
+            }, 1000); // Aguarde 1 segundo antes de remover a classe
+        });
+
+        $('.ver-todas').click(function(e){
+            e.preventDefault();
+            $('html, body').animate({
+                scrollTop: $('#todasAsCartas').offset().top
+            }, 1000);
+        });
+    });
     </script>
 </body>
 </html>

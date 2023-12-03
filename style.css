@@ -1,5 +1,16 @@
+@font-face {
+    font-family: 'Chopin Script';
+    src: url('./ChopinScript.ttf');
+}
+
+@font-face {
+    font-family: 'Stnicholas';
+    src: url('./stnicholas.ttf');
+}
+
 body {
-    font-family: sans-serif;
+    /*font-family: sans-serif;*/
+    font-family: 'Stnicholas';
     font-size: 16px;
     color: rgb(0, 0, 0);
     background-color: #0c81f7c4;
@@ -49,6 +60,7 @@ header {
         margin-top: 50px;
         font-size: 20px;
     }
+    
 
     .foto1 {
         width: 80%; /* Ajuste a largura da imagem para telas pequenas */
@@ -63,7 +75,17 @@ header {
     .ver-todas {
         margin-top: 20px;
     }
+
+    .main {
+        flex-direction: column; /* Empilha os elementos verticalmente em telas pequenas */
+    }
+
+    .foto {
+        width: 80%; /* Ajusta a largura da imagem para telas pequenas */
+        margin: 0 auto; /* Centraliza a imagem */
+    }
 }
+
 nav {
     display: flex;
 }
@@ -102,10 +124,21 @@ ul {
 }
 
 .foto1 {
-    width: 50%;
+    width: 100%;
+    height: 450px;
     margin: 0;
 }
 
+.main2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.conteudo-doacao {
+    margin-top: 20px;
+}
 p {
     color: #ffffff;
     font-size: 25px;
@@ -117,13 +150,25 @@ a {
     text-decoration: none;
 }
 
-h1, h2, h3, ul, li {
+h1,h3, ul, li, p {
     color: #ffffff;
+    background-image: url(./efeito.gif);
+    background-size: auto;
+    background-position: center top; /* Ajuste a posição conforme necessário */
+}
+
+h2{
+    color: #ffffff;
+    background-image: url(./efeito.gif);
+    background-size: auto;
+    background-repeat: no-repeat;
+    background-position: center top; /* Ajuste a posição conforme necessário */
 }
 
 .titulo {
     text-align: center;
     margin-top: 0;
+
 }
 
 .cartas-carousel {
@@ -144,3 +189,55 @@ h1, h2, h3, ul, li {
     margin-top: 20px;
     display: inline-block;
 }
+
+    /* Adiciona estilo para a classe 'adote' */
+    .adote {
+        display: flex;
+        align-items: center;
+        margin: 20px 0; /* Adapte a margem conforme necessário */
+        animation: slideText 15s linear infinite; /* Ajuste a duração conforme necessário */
+    }
+
+    /* Adiciona estilo para a classe 'ftpapainoel' */
+    
+    .ftpapainoel {
+        margin-right: 20px;
+        max-width: 30%; /* Garante que a imagem não ultrapasse o contêiner */
+    }
+
+    /* Adiciona estilo para a classe 'blinking' */
+    .blinking.adote-text {
+        margin: 0;
+    }
+
+/* Adiciona animação para o texto passando pela tela */
+/*.adote {
+    white-space: nowrap;
+    overflow: hidden;
+    animation: slideText 20s linear infinite; /* Ajuste a duração conforme necessário */
+   /* 
+}*/
+
+@keyframes slideText {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+/* Adiciona animação de piscar colorido para as letras */
+.blinking {
+    animation: blink 3s infinite; /* Ajuste a duração conforme necessário */
+}
+
+@keyframes blink {
+    0%, 50%, 100% {
+        color: #ff0000; /* Cor vermelha */
+    }
+    25%, 75% {
+        color: #ffffff; /* Cor verde */
+    }
+}
+
