@@ -8,9 +8,30 @@
     src: url('./stnicholas.ttf');
 }
 
+@font-face {
+    font-family: 'Lora';
+    src: url('../cartinhanatal/Lora-VariableFont_wght.ttf');
+}
+
+
+@font-face {
+    font-family: 'GreatVibes';
+    src: url('./GreatVibes-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'Kalam';
+    src: url('./Kalam-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'KalamLight';
+    src: url('./Kalam-Light.ttf');
+}
+
 body {
     /*font-family: sans-serif;*/
-    font-family: 'Stnicholas';
+    font-family: 'Lora';
     font-size: 16px;
     color: rgb(0, 0, 0);
     background-color: #0c81f7c4;
@@ -84,6 +105,15 @@ header {
         width: 80%; /* Ajusta a largura da imagem para telas pequenas */
         margin: 0 auto; /* Centraliza a imagem */
     }
+
+    .tituloh1 {
+        font-size: 10px;
+        font-family: 'GreatVibes';
+        font-style: italic;
+        font-weight: 300;
+        text-align: center;
+      }
+    
 }
 
 nav {
@@ -241,3 +271,38 @@ h2{
     }
 }
 
+
+@media (min-width: 1024px) {
+        /* Adiciona estilo para a classe 'adote' */
+        .adote {
+            display: flex;
+            align-items: center;
+            margin: 20px 0; /* Adapte a margem conforme necessário */
+            animation: slideText 15s linear infinite; /* Ajuste a duração conforme necessário */
+            font-family: 'KalamLight';
+            font-size: 45px;
+        }
+
+        #texto{
+            margin-left: 100px;
+            margin-right: 100px;
+        }
+        
+        
+        
+  }
+
+  .tituloh1 {
+    font-size: 75px;
+    font-family: 'GreatVibes';
+    font-style: italic;
+    font-weight: 300;
+  }
+
+.navegacao{
+    text-align: center;
+}
+
+#fotonav{
+    margin-left: 25px;
+}
