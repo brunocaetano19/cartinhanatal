@@ -37,47 +37,53 @@
         <div class="grid-container">
             <!-- Cria um elemento para cada imagem e texto -->
             <div class="grid-item">
-                <img class="cartas" src="./carta.png" alt="Carta 1" onclick="openModal(this)">
-                <p class="texto">Cartinha 1 <br>Presente:</p>
+                <img class="cartas" src="./carta.png" data-src="./carta-1.png" alt="Carta 1" onclick="openModal(this)">
+                <p class="texto">Cartinha 1 <br> Criança: <br> Presente:</p>
 
             </div>
             <div class="grid-item">
                 <img class="cartas" src="./carta.png" alt="Carta 2" onclick="openModal(this)">
-                <p class="texto">Cartinha 2<br>Presente: </p>
+                <p class="texto">Cartinha 2 <br> Crinaça: <br> Presente: </p>
             </div>
             <div class="grid-item">
                 <img class="cartas" src="./carta.png" alt="Carta 3" onclick="openModal(this)">
-                <p class="texto">Cartinha 3<br>Presente:</p>
+                <p class="texto">Cartinha 3<br> Crinaça: <br> Presente:</p>
             </div>
             <div class="grid-item">
                 <img class="cartas" src="./carta.png" alt="Carta 4" onclick="openModal(this)">
-                <p class="texto">Cartinha 4<br>Presente:</p>
+                <p class="texto">Cartinha 4<br> Crinaça: <br> Presente:</p>
             </div>
             <div class="grid-item">
                 <img class="cartas" src="./carta.png" alt="Carta 5" onclick="openModal(this)">
-                <p class="texto">Cartinha 5<br>Presente:</p>
+                <p class="texto">Cartinha 5<br> Crinaça: <br> Presente:</p>
             </div>
             <div class="grid-item">
                 <img class="cartas" src="./carta.png" alt="Carta 6" onclick="openModal(this)">
-                <p class="texto">Cartinha 6<br>Presente:</p>
+                <p class="texto">Cartinha 6<br> Crinaça: <br> Presente:</p>
             </div>
             <div class="grid-item">
                 <img class="cartas" src="./carta.png" alt="Carta 7" onclick="openModal(this)">
-                <p class="texto">Cartinha 7<br>Presente:</p>
+                <p class="texto">Cartinha 7<br> Crinaça: <br> Presente:</p>
             </div>
             <div class="grid-item">
                 <img class="cartas" src="./carta.png" alt="Carta 8" onclick="openModal(this)">
-                <p class="texto">Cartinha 8<br>Presente:</p>
+                <p class="texto">Cartinha 8<br> Crinaça: <br> Presente:</p>
             </div>
             <div class="grid-item">
                 <img class="cartas" src="./carta.png" alt="Carta 9" onclick="openModal(this)">
-                <p class="texto">Cartinha 9<br>Presente:</p>
+                <p class="texto">Cartinha 9<br> Crinaça: <br>Presente:</p>
             </div>
 
             <!-- Adicione mais elementos conforme necessário -->
         </div>
     </div>
-    
+
+    <div id="modal" class="modal">
+        <span class="close" onclick="closeModal()">×</span>
+        <img id="modal-img" class="modal-content">
+        <button type="button" class="adotar">Adotar</button>
+    </div>
+      
     <!-- Cria um modal para exibir a imagem ampliada -->
     <div id="modal" class="modal">
         <!-- Cria um botão para fechar o modal -->
@@ -95,10 +101,10 @@
             // Obtém o elemento da imagem ampliada
             var modalImg = document.getElementById("modal-img");
             // Define o atributo src da imagem ampliada como o mesmo da imagem clicada
-            modalImg.src = img.src;
+            modalImg.src = img.dataset.src;
             // Exibe o modal
             modal.style.display = "block";
-        }
+}
     
         // Cria uma função para fechar o modal
         function closeModal() {
@@ -107,5 +113,13 @@
             // Esconde o modal
             modal.style.display = "none";
         }
+
+        // Cria um evento click para o botão
+        document.getElementById("modal-img").querySelector(".adotar").addEventListener("click", function() {
+            // Realiza a ação desejada
+            // Por exemplo, abre um formulário de doação
+            // Ou redireciona o usuário para uma página de doação
+        });
+
     </script>
     
