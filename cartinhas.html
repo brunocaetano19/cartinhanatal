@@ -31,90 +31,81 @@
     </div>
 
     <div class="main1">
-        <!-- <img class="foto1" src="./Post instagram natal adote uma carta.png"> -->
         <h1 class="tituloh1">Cartinhas Disponíveis:</h1>
         
-        <div class="cartas-carousel">
-            <img class="cartas" src="./carta.png">
-            <img class="cartas" src="./carta.png">
-            <img class="cartas" src="./carta.png">
-            <img class="cartas" src="./carta.png">
-            <img class="cartas" src="./carta.png">
-            <img class="cartas" src="./carta.png">
+        <!-- Cria um contêiner para a grade de imagens -->
+        <div class="grid-container">
+            <!-- Cria um elemento para cada imagem e texto -->
+            <div class="grid-item">
+                <img class="cartas" src="./carta.png" alt="Carta 1" onclick="openModal(this)">
+                <p class="texto">Cartinha 1 <br>Presente:</p>
+
+            </div>
+            <div class="grid-item">
+                <img class="cartas" src="./carta.png" alt="Carta 2" onclick="openModal(this)">
+                <p class="texto">Cartinha 2<br>Presente: </p>
+            </div>
+            <div class="grid-item">
+                <img class="cartas" src="./carta.png" alt="Carta 3" onclick="openModal(this)">
+                <p class="texto">Cartinha 3<br>Presente:</p>
+            </div>
+            <div class="grid-item">
+                <img class="cartas" src="./carta.png" alt="Carta 4" onclick="openModal(this)">
+                <p class="texto">Cartinha 4<br>Presente:</p>
+            </div>
+            <div class="grid-item">
+                <img class="cartas" src="./carta.png" alt="Carta 5" onclick="openModal(this)">
+                <p class="texto">Cartinha 5<br>Presente:</p>
+            </div>
+            <div class="grid-item">
+                <img class="cartas" src="./carta.png" alt="Carta 6" onclick="openModal(this)">
+                <p class="texto">Cartinha 6<br>Presente:</p>
+            </div>
+            <div class="grid-item">
+                <img class="cartas" src="./carta.png" alt="Carta 7" onclick="openModal(this)">
+                <p class="texto">Cartinha 7<br>Presente:</p>
+            </div>
+            <div class="grid-item">
+                <img class="cartas" src="./carta.png" alt="Carta 8" onclick="openModal(this)">
+                <p class="texto">Cartinha 8<br>Presente:</p>
+            </div>
+            <div class="grid-item">
+                <img class="cartas" src="./carta.png" alt="Carta 9" onclick="openModal(this)">
+                <p class="texto">Cartinha 9<br>Presente:</p>
+            </div>
+
+            <!-- Adicione mais elementos conforme necessário -->
         </div>
-
-        <div class="cartas-carousel">
-            <img class="cartas" src="./carta.png">
-            <img class="cartas" src="./carta.png">
-            <img class="cartas" src="./carta.png">
-            <img class="cartas" src="./carta.png">
-            <img class="cartas" src="./carta.png">
-            <img class="cartas" src="./carta.png">
-        </div>
-
-        <div class="cartas-carousel">
-            <img class="cartas" src="./carta.png">
-            <img class="cartas" src="./carta.png">
-            <img class="cartas" src="./carta.png">
-            <img class="cartas" src="./carta.png">
-            <img class="cartas" src="./carta.png">
-            <img class="cartas" src="./carta.png">
-        </div>
-
-        
-
-        <a class="ver-todas" href="#todasAsCartas">Ver Todas</a>
     </div>
     
-    <!-- Seção com Todas as Cartas -->
-    <!-- <div id="todasAsCartas">
-        Coloque aqui o código para exibir todas as cartas 
-        <p>Carta 1</p>
-        <p>Carta 2</p>
-        <p>Carta 3</p>
-        Adicione mais cartas conforme necessário 
-    </div>-->
-
+    <!-- Cria um modal para exibir a imagem ampliada -->
+    <div id="modal" class="modal">
+        <!-- Cria um botão para fechar o modal -->
+        <span class="close" onclick="closeModal()">×</span>
+        <!-- Cria um elemento para exibir a imagem ampliada -->
+        <img id="modal-img" class="modal-content">
+    </div>
+    
+    <!-- Adicione o script para o modal -->
     <script>
-        $(document).ready(function(){
-            $('.cartas-carousel').slick({
-                slidesToShow: 3, // Altere para exibir três cartas
-                slidesToScroll: 1,
-                autoplay: true,
-                autoplaySpeed: 2000 // Tempo de exibição de cada carta em milissegundos
-            });
-
-            // Adiciona o comportamento de rolar até a seção de todas as cartas ao clicar em "Ver Todas"
-            $('.ver-todas').click(function(e){
-                e.preventDefault();
-                $('html, body').animate({
-                    scrollTop: $('#todasAsCartas').offset().top
-                }, 1000); // Tempo da animação em milissegundos
-            });
-        });
-
-        $(document).ready(function(){
-        $('.cartas-carousel').slick({
-            slidesToShow: 3,
-            slidesToScroll: 1,
-            autoplay: true,
-            autoplaySpeed: 2000
-        });
-
-        $('.adote-text').on('animationiteration', function() {
-            setTimeout(() => {
-                // Remova a classe 'blinking' para interromper a animação de piscar
-                $(this).removeClass('blinking');
-            }, 1000); // Aguarde 1 segundo antes de remover a classe
-        });
-
-        $('.ver-todas').click(function(e){
-            e.preventDefault();
-            $('html, body').animate({
-                scrollTop: $('#todasAsCartas').offset().top
-            }, 1000);
-        });
-    });
+        // Cria uma função para abrir o modal
+        function openModal(img) {
+            // Obtém o elemento do modal
+            var modal = document.getElementById("modal");
+            // Obtém o elemento da imagem ampliada
+            var modalImg = document.getElementById("modal-img");
+            // Define o atributo src da imagem ampliada como o mesmo da imagem clicada
+            modalImg.src = img.src;
+            // Exibe o modal
+            modal.style.display = "block";
+        }
+    
+        // Cria uma função para fechar o modal
+        function closeModal() {
+            // Obtém o elemento do modal
+            var modal = document.getElementById("modal");
+            // Esconde o modal
+            modal.style.display = "none";
+        }
     </script>
-</body>
-</html>
+    
